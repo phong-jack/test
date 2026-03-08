@@ -1,0 +1,924 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chúc mừng 8/3 Như 🌸</title>
+  <meta name="description" content="Một bó hoa nhỏ dành cho Như – Happy Women's Day!" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Dancing+Script:wght@600;700&family=Lato:wght@300;400&display=swap"
+    rel="stylesheet" />
+  <style>
+    /* ===========================
+       CSS RESET & BASE
+    =========================== */
+    *,
+    *::before,
+    *::after {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    :root {
+      --pink: #f7a8c4;
+      --pink-deep: #e8729a;
+      --pink-light: #fde8f0;
+      --purple: #c9a7eb;
+      --purple-deep: #9b72cf;
+      --white: #fff;
+      --text-dark: #5a3260;
+      --text-soft: #8f6a9b;
+      --glass-bg: rgba(255, 255, 255, 0.18);
+      --glass-border: rgba(255, 255, 255, 0.4);
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Lato', sans-serif;
+      background: linear-gradient(135deg, #fce4ec 0%, #f3e5f5 50%, #ede7f6 100%);
+      min-height: 100vh;
+      overflow-x: hidden;
+      color: var(--text-dark);
+    }
+
+    /* ===========================
+       FLOATING PETAL CANVAS
+    =========================== */
+    #petal-canvas {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* ===========================
+       SECTION BASE
+    =========================== */
+    section {
+      position: relative;
+      z-index: 1;
+    }
+
+    /* ===========================
+       SECTION 1 – LANDING
+    =========================== */
+    #landing {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 2rem;
+    }
+
+    .glass-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1.5px solid var(--glass-border);
+      border-radius: 2rem;
+      padding: 3rem 2.5rem;
+      max-width: 520px;
+      width: 100%;
+      box-shadow: 0 8px 32px rgba(200, 130, 180, 0.18),
+        0 0 60px rgba(200, 130, 180, 0.08);
+      animation: floatCard 4s ease-in-out infinite;
+    }
+
+    @keyframes floatCard {
+
+      0%,
+      100% {
+        transform: translateY(0px);
+      }
+
+      50% {
+        transform: translateY(-12px);
+      }
+    }
+
+    .landing-emoji {
+      font-size: 4rem;
+      display: block;
+      margin-bottom: 0.5rem;
+      animation: pulse 2s ease-in-out infinite;
+    }
+
+    @keyframes pulse {
+
+      0%,
+      100% {
+        transform: scale(1);
+      }
+
+      50% {
+        transform: scale(1.15);
+      }
+    }
+
+    .landing-title {
+      font-family: 'Dancing Script', cursive;
+      font-size: clamp(2.2rem, 7vw, 3.6rem);
+      font-weight: 700;
+      color: var(--pink-deep);
+      text-shadow: 0 2px 20px rgba(232, 114, 154, 0.4);
+      line-height: 1.2;
+      margin-bottom: 1rem;
+    }
+
+    .landing-sub {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: clamp(1rem, 3vw, 1.25rem);
+      color: var(--text-soft);
+      margin-bottom: 2rem;
+      line-height: 1.7;
+    }
+
+    /* Glowing CTA button */
+    .btn-glow {
+      display: inline-block;
+      padding: 0.85rem 2.5rem;
+      background: linear-gradient(135deg, var(--pink), var(--purple));
+      color: white;
+      font-family: 'Lato', sans-serif;
+      font-size: 1.1rem;
+      font-weight: 700;
+      letter-spacing: 1.5px;
+      text-transform: uppercase;
+      border: none;
+      border-radius: 50px;
+      cursor: pointer;
+      box-shadow: 0 4px 20px rgba(200, 100, 180, 0.5),
+        0 0 40px rgba(200, 100, 180, 0.2);
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .btn-glow::after {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -60%;
+      width: 40%;
+      height: 200%;
+      background: rgba(255, 255, 255, 0.25);
+      transform: skewX(-20deg);
+      transition: left 0.5s ease;
+    }
+
+    .btn-glow:hover {
+      transform: translateY(-3px) scale(1.05);
+      box-shadow: 0 8px 30px rgba(200, 100, 180, 0.7),
+        0 0 70px rgba(200, 100, 180, 0.3);
+    }
+
+    .btn-glow:hover::after {
+      left: 130%;
+    }
+
+    .btn-glow:active {
+      transform: scale(0.97);
+    }
+
+    /* ===========================
+       SECTION 2 – FLOWER BOUQUET
+    =========================== */
+    #flowers {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem;
+      opacity: 0;
+      transform: translateY(40px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    #flowers.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .section-title {
+      font-family: 'Dancing Script', cursive;
+      font-size: clamp(1.8rem, 5vw, 2.8rem);
+      color: var(--pink-deep);
+      text-align: center;
+      margin-bottom: 3rem;
+      text-shadow: 0 2px 12px rgba(232, 114, 154, 0.3);
+    }
+
+    /* SVG Bouquet Stage */
+    .bouquet-stage {
+      width: min(480px, 92vw);
+      height: min(480px, 92vw);
+      position: relative;
+      margin: 0 auto 2rem;
+    }
+
+    /* Each flower is an absolutely positioned SVG */
+    .flower {
+      position: absolute;
+      transform-origin: bottom center;
+      opacity: 0;
+      transform: scale(0) rotate(-10deg);
+      transition: opacity 0.6s ease, transform 0.6s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    .flower.bloom {
+      opacity: 1;
+      transform: scale(1) rotate(0deg);
+    }
+
+    /* Sparkle particles */
+    .sparkle {
+      position: absolute;
+      border-radius: 50%;
+      background: radial-gradient(circle, #fff 0%, var(--pink) 60%, transparent 100%);
+      pointer-events: none;
+      animation: sparkleAnim 1.5s ease-out forwards;
+    }
+
+    @keyframes sparkleAnim {
+      0% {
+        opacity: 1;
+        transform: scale(0) translateY(0);
+      }
+
+      60% {
+        opacity: 1;
+      }
+
+      100% {
+        opacity: 0;
+        transform: scale(1) translateY(-50px);
+      }
+    }
+
+    /* ===========================
+       SECTION 3 – MESSAGE
+    =========================== */
+    #message {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem;
+    }
+
+    .message-card {
+      background: var(--glass-bg);
+      backdrop-filter: blur(18px);
+      -webkit-backdrop-filter: blur(18px);
+      border: 1.5px solid var(--glass-border);
+      border-radius: 2rem;
+      padding: 3rem 2.5rem;
+      max-width: 600px;
+      width: 100%;
+      box-shadow: 0 8px 40px rgba(180, 100, 210, 0.15);
+      text-align: center;
+    }
+
+    .message-card h2 {
+      font-family: 'Dancing Script', cursive;
+      font-size: 2rem;
+      color: var(--pink-deep);
+      margin-bottom: 1.8rem;
+    }
+
+    .message-text {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1rem, 2.5vw, 1.15rem);
+      line-height: 2;
+      color: var(--text-dark);
+      white-space: pre-line;
+    }
+
+    .message-text em {
+      color: var(--purple-deep);
+      font-style: italic;
+    }
+
+    /* ===========================
+       SECTION 4 – INTERACTIVE
+    =========================== */
+    #interactive {
+      min-height: 60vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+
+    .interactive-label {
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      font-size: 1.1rem;
+      color: var(--text-soft);
+      margin-bottom: 1.5rem;
+    }
+
+    .final-msg {
+      font-family: 'Dancing Script', cursive;
+      font-size: clamp(1.4rem, 4vw, 2rem);
+      color: var(--pink-deep);
+      margin-top: 1.5rem;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.8s ease, transform 0.8s ease;
+    }
+
+    .final-msg.show {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Floating hearts (JS injected) */
+    .heart-particle {
+      position: fixed;
+      pointer-events: none;
+      font-size: 1.5rem;
+      z-index: 9999;
+      animation: heartFloat 2.5s ease-out forwards;
+      user-select: none;
+    }
+
+    @keyframes heartFloat {
+      0% {
+        opacity: 1;
+        transform: translateY(0) scale(1) rotate(0deg);
+      }
+
+      80% {
+        opacity: 0.8;
+      }
+
+      100% {
+        opacity: 0;
+        transform: translateY(-300px) scale(1.4) rotate(20deg);
+      }
+    }
+
+    /* ===========================
+       FOOTER
+    =========================== */
+    footer {
+      text-align: center;
+      padding: 2rem 1rem 3rem;
+      font-family: 'Playfair Display', serif;
+      font-style: italic;
+      color: var(--text-soft);
+      font-size: 0.95rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    footer span {
+      color: var(--pink-deep);
+    }
+
+    /* ===========================
+       RESPONSIVE TWEAKS
+    =========================== */
+    @media (max-width: 480px) {
+
+      .glass-card,
+      .message-card {
+        padding: 2rem 1.4rem;
+      }
+    }
+
+    /* smooth scrolling highlight ring on btn */
+    .btn-glow:focus-visible {
+      outline: 3px solid var(--purple);
+      outline-offset: 4px;
+    }
+
+    /* subtle bg orbs */
+    .orb {
+      position: fixed;
+      border-radius: 50%;
+      filter: blur(80px);
+      opacity: 0.35;
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    .orb-1 {
+      width: 420px;
+      height: 420px;
+      background: radial-gradient(circle, #f7a8c4, transparent);
+      top: -100px;
+      left: -100px;
+      animation: driftOrb 10s ease-in-out infinite alternate;
+    }
+
+    .orb-2 {
+      width: 320px;
+      height: 320px;
+      background: radial-gradient(circle, #c9a7eb, transparent);
+      bottom: 80px;
+      right: -80px;
+      animation: driftOrb 14s ease-in-out infinite alternate-reverse;
+    }
+
+    .orb-3 {
+      width: 260px;
+      height: 260px;
+      background: radial-gradient(circle, #fce4ec, transparent);
+      top: 40%;
+      left: 50%;
+      animation: driftOrb 12s ease-in-out infinite alternate;
+    }
+
+    @keyframes driftOrb {
+      from {
+        transform: translate(0, 0) scale(1);
+      }
+
+      to {
+        transform: translate(30px, 40px) scale(1.1);
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <!-- Background ambience orbs -->
+  <div class="orb orb-1"></div>
+  <div class="orb orb-2"></div>
+  <div class="orb orb-3"></div>
+
+  <!-- Animated petal canvas -->
+  <canvas id="petal-canvas"></canvas>
+
+  <!-- ============================================================
+       SECTION 1 – LANDING
+  ============================================================ -->
+  <section id="landing">
+    <div class="glass-card">
+      <span class="landing-emoji">🌸</span>
+      <h1 class="landing-title">Chúc mừng 8/3 Như 🌸</h1>
+      <p class="landing-sub">Một bó hoa nhỏ dành cho cô gái đặc biệt 💐</p>
+      <!-- CTA button scrolls to flower section and triggers bloom -->
+      <button class="btn-glow" id="btn-receive" onclick="revealFlowers()">Nhận hoa</button>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 2 – FLOWER BOUQUET
+  ============================================================ -->
+  <section id="flowers">
+    <h2 class="section-title">💐 Bó hoa dành riêng cho Như 💐</h2>
+
+    <!-- SVG flower bouquet stage -->
+    <div class="bouquet-stage" id="bouquet-stage">
+      <!-- Flowers are rendered via JS for fine-grained bloom control -->
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 3 – HEARTFELT MESSAGE
+  ============================================================ -->
+  <section id="message">
+    <div class="message-card">
+      <h2>💌 Lời nhắn nhỏ</h2>
+      <p class="message-text">
+        Như ơiiiii,
+
+        Văn anh không hay lắm mô
+
+        Chúc em <em>luôn vui vẻ</em>, <em>luôn xinh đẹp</em>
+        và luôn là phiên bản tuyệt vời nhất
+        của chính mình.
+
+        Anh không nghĩ là anh có thể gặp được em luônnn á, người gì đâu mà dễ thương, mà còn chu đáo nữa, thích nhất mấy
+        lúc em để ý mấy cái việc nhỏ cho anh ơ!
+
+
+        Mặc dù a chúc em 8/3 rồi nhưng vẫn muốn làm thêm một chút
+
+
+
+        8/3 Vui vẻ, hạnh phúc nha Khánh Như
+
+        <em>Happy Women's Day 🌸</em>
+      </p>
+    </div>
+  </section>
+
+  <!-- ============================================================
+       SECTION 4 – INTERACTIVE
+  ============================================================ -->
+  <section id="interactive">
+    <p class="interactive-label">Một điều nhỏ nữa dành cho em… 💖</p>
+    <button class="btn-glow" id="btn-hearts" onclick="launchHearts()">Nhấn vào đây 💕</button>
+    <p class="final-msg" id="final-msg">
+      ✨ Cảm ơn Như vì đã xuất hiện. ✨
+    </p>
+  </section>
+
+  <!-- ============================================================
+       FOOTER
+  ============================================================ -->
+  <footer>
+    <span>🌸</span> From someone who appreciates you <span>🌸</span>
+  </footer>
+
+  <script>
+    /* ============================================================
+       FLOATING PETAL CANVAS
+       Draws cherry blossom petals drifting across the screen.
+    ============================================================ */
+    (function () {
+      const canvas = document.getElementById('petal-canvas');
+      const ctx = canvas.getContext('2d');
+      let W, H, petals = [];
+
+      const PETAL_COUNT = 35;
+
+      // Petal colors — soft pinks and purples
+      const colors = ['#f7a8c4', '#e8729a', '#c9a7eb', '#f4b8d1', '#ddb4f0', '#fde8f0'];
+
+      function resize() {
+        W = canvas.width = window.innerWidth;
+        H = canvas.height = window.innerHeight;
+      }
+      window.addEventListener('resize', resize);
+      resize();
+
+      /* Creates a single petal object */
+      function createPetal(startFresh) {
+        const size = Math.random() * 14 + 6;
+        return {
+          x: Math.random() * W,
+          y: startFresh ? -(Math.random() * H) : Math.random() * H,
+          size,
+          color: colors[Math.floor(Math.random() * colors.length)],
+          speed: Math.random() * 1.2 + 0.4,
+          drift: Math.random() * 1.2 - 0.6,      // horizontal drift
+          rotation: Math.random() * Math.PI * 2,
+          rotSpeed: (Math.random() - 0.5) * 0.06,
+          opacity: Math.random() * 0.5 + 0.4,
+          wobble: Math.random() * Math.PI * 2,
+          wobbleSpeed: Math.random() * 0.04 + 0.01,
+        };
+      }
+
+      /* Initialise petals */
+      for (let i = 0; i < PETAL_COUNT; i++) petals.push(createPetal(false));
+
+      /* Draws a simple 5-petal flower shape */
+      function drawPetal(p) {
+        ctx.save();
+        ctx.translate(p.x, p.y);
+        ctx.rotate(p.rotation);
+        ctx.globalAlpha = p.opacity;
+        ctx.fillStyle = p.color;
+        ctx.beginPath();
+        const s = p.size;
+        // Simple ellipse petal
+        ctx.ellipse(0, -s / 2, s * 0.38, s * 0.6, 0, 0, Math.PI * 2);
+        ctx.fill();
+        ctx.restore();
+      }
+
+      function animate() {
+        ctx.clearRect(0, 0, W, H);
+        petals.forEach((p, i) => {
+          p.wobble += p.wobbleSpeed;
+          p.x += p.drift + Math.sin(p.wobble) * 0.6;
+          p.y += p.speed;
+          p.rotation += p.rotSpeed;
+
+          if (p.y > H + 20) {
+            petals[i] = createPetal(true); // recycle
+          }
+          drawPetal(p);
+        });
+        requestAnimationFrame(animate);
+      }
+      animate();
+    })();
+
+
+    /* ============================================================
+       REVEAL FLOWER SECTION
+       Smooth scroll → bloom each SVG flower with a staggered delay.
+    ============================================================ */
+    function revealFlowers() {
+      // Scroll smoothly to the flower section
+      document.getElementById('flowers').scrollIntoView({ behavior: 'smooth' });
+
+      // Make section visible (CSS transition)
+      setTimeout(() => {
+        document.getElementById('flowers').classList.add('visible');
+        renderBouquet(); // build & bloom flowers
+      }, 600);
+    }
+
+    /* ============================================================
+       BOUQUET RENDERER
+       Places hand-crafted SVG roses and cherry blossoms in a
+       bouquet layout and blooms them one by one.
+    ============================================================ */
+    function renderBouquet() {
+      const stage = document.getElementById('bouquet-stage');
+      if (stage.dataset.done) return; // prevent double-render
+      stage.dataset.done = '1';
+
+      const stageW = stage.offsetWidth || 400;
+      const stageH = stage.offsetHeight || 400;
+
+      /* Bouquet positions as % of stage size.
+         Each entry: { left%, top%, scale, colorPrimary, colorInner, type, delay } */
+      const flowers = [
+        // Centre focal rose
+        { l: 42, t: 18, sc: 1.25, cp: '#e8729a', ci: '#ffd6e7', type: 'rose', delay: 0 },
+        // Left roses
+        { l: 22, t: 28, sc: 1.0, cp: '#c06090', ci: '#f0b8d8', type: 'rose', delay: 150 },
+        { l: 10, t: 42, sc: 0.85, cp: '#e8729a', ci: '#fde8f0', type: 'cherry', delay: 280 },
+        // Right roses
+        { l: 60, t: 28, sc: 1.0, cp: '#c9a7eb', ci: '#ede4f8', type: 'rose', delay: 200 },
+        { l: 72, t: 42, sc: 0.85, cp: '#9b72cf', ci: '#ddb4f0', type: 'cherry', delay: 320 },
+        // Back side blossoms
+        { l: 30, t: 50, sc: 0.75, cp: '#f7a8c4', ci: '#fff', type: 'cherry', delay: 400 },
+        { l: 52, t: 50, sc: 0.75, cp: '#d4a0e8', ci: '#fbf0ff', type: 'cherry', delay: 480 },
+        { l: 18, t: 60, sc: 0.7, cp: '#e8729a', ci: '#fde8f0', type: 'cherry', delay: 560 },
+        { l: 64, t: 60, sc: 0.7, cp: '#c9a7eb', ci: '#ede4f8', type: 'cherry', delay: 620 },
+        // Foreground greenery accent
+        { l: 38, t: 72, sc: 0.65, cp: '#a8d5a2', ci: '#d0f0cc', type: 'leaf', delay: 700 },
+        { l: 50, t: 72, sc: 0.65, cp: '#8ec68a', ci: '#c5eac0', type: 'leaf', delay: 750 },
+      ];
+
+      const svgNS = 'http://www.w3.org/2000/svg';
+
+      flowers.forEach(f => {
+        /* Wrapper div for positioning & bloom transition */
+        const wrap = document.createElement('div');
+        wrap.className = 'flower';
+        wrap.style.left = f.l + '%';
+        wrap.style.top = f.t + '%';
+        wrap.style.width = (stageW * 0.22 * f.sc) + 'px';
+        wrap.style.height = (stageW * 0.22 * f.sc) + 'px';
+        wrap.style.transitionDelay = f.delay + 'ms';
+
+        const svg = document.createElementNS(svgNS, 'svg');
+        svg.setAttribute('viewBox', '0 0 100 100');
+        svg.setAttribute('xmlns', svgNS);
+        svg.style.width = svg.style.height = '100%';
+        svg.style.overflow = 'visible';
+
+        if (f.type === 'rose') svg.appendChild(makeRoseSVG(svgNS, f.cp, f.ci));
+        if (f.type === 'cherry') svg.appendChild(makeCherrySVG(svgNS, f.cp, f.ci));
+        if (f.type === 'leaf') svg.appendChild(makeLeafSVG(svgNS, f.cp, f.ci));
+
+        wrap.appendChild(svg);
+        stage.appendChild(wrap);
+
+        // Trigger bloom after paint + stagger delay
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            setTimeout(() => {
+              wrap.classList.add('bloom');
+              // Spawn sparkles around this flower
+              spawnSparkles(stage, f.l, f.t, 8, f.cp);
+            }, f.delay + 500);
+          });
+        });
+      });
+
+      // After all flowers bloom, scroll gently to message
+      setTimeout(() => {
+        document.getElementById('message').scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 2800);
+    }
+
+    /* ── SVG shape builders ── */
+
+    /* Rose: layered petals using arcs */
+    function makeRoseSVG(ns, cp, ci) {
+      const g = document.createElementNS(ns, 'g');
+      // Stem
+      const stem = document.createElementNS(ns, 'line');
+      stem.setAttribute('x1', '50'); stem.setAttribute('y1', '80');
+      stem.setAttribute('x2', '50'); stem.setAttribute('y2', '105');
+      stem.setAttribute('stroke', '#70a862'); stem.setAttribute('stroke-width', '4');
+      stem.setAttribute('stroke-linecap', 'round');
+      g.appendChild(stem);
+
+      // Outer petals (5)
+      const outerData = [0, 72, 144, 216, 288];
+      outerData.forEach(angle => {
+        const p = document.createElementNS(ns, 'ellipse');
+        const rad = angle * Math.PI / 180;
+        p.setAttribute('cx', String(50 + 22 * Math.sin(rad)));
+        p.setAttribute('cy', String(50 - 22 * Math.cos(rad)));
+        p.setAttribute('rx', '14'); p.setAttribute('ry', '22');
+        p.setAttribute('fill', cp); p.setAttribute('opacity', '0.85');
+        p.setAttribute('transform', `rotate(${angle},${50 + 22 * Math.sin(rad)},${50 - 22 * Math.cos(rad)})`);
+        g.appendChild(p);
+      });
+
+      // Mid petals (5 offset)
+      const midData = [36, 108, 180, 252, 324];
+      midData.forEach(angle => {
+        const p = document.createElementNS(ns, 'ellipse');
+        const rad = angle * Math.PI / 180;
+        p.setAttribute('cx', String(50 + 14 * Math.sin(rad)));
+        p.setAttribute('cy', String(50 - 14 * Math.cos(rad)));
+        p.setAttribute('rx', '10'); p.setAttribute('ry', '17');
+        p.setAttribute('fill', cp); p.setAttribute('opacity', '0.95');
+        p.setAttribute('transform', `rotate(${angle},${50 + 14 * Math.sin(rad)},${50 - 14 * Math.cos(rad)})`);
+        g.appendChild(p);
+      });
+
+      // Inner centre
+      const centre = document.createElementNS(ns, 'circle');
+      centre.setAttribute('cx', '50'); centre.setAttribute('cy', '50');
+      centre.setAttribute('r', '12'); centre.setAttribute('fill', ci);
+      g.appendChild(centre);
+
+      // Core dot
+      const dot = document.createElementNS(ns, 'circle');
+      dot.setAttribute('cx', '50'); dot.setAttribute('cy', '50');
+      dot.setAttribute('r', '5'); dot.setAttribute('fill', cp);
+      g.appendChild(dot);
+
+      return g;
+    }
+
+    /* Cherry blossom: 5 heart-like petals */
+    function makeCherrySVG(ns, cp, ci) {
+      const g = document.createElementNS(ns, 'g');
+
+      // Stem
+      const stem = document.createElementNS(ns, 'line');
+      stem.setAttribute('x1', '50'); stem.setAttribute('y1', '78');
+      stem.setAttribute('x2', '50'); stem.setAttribute('y2', '105');
+      stem.setAttribute('stroke', '#70a862'); stem.setAttribute('stroke-width', '3.5');
+      stem.setAttribute('stroke-linecap', 'round');
+      g.appendChild(stem);
+
+      // 5 petals
+      for (let i = 0; i < 5; i++) {
+        const angle = (i / 5) * 360;
+        const p = document.createElementNS(ns, 'ellipse');
+        const rad = angle * Math.PI / 180;
+        p.setAttribute('cx', String(50 + 20 * Math.sin(rad)));
+        p.setAttribute('cy', String(50 - 20 * Math.cos(rad)));
+        p.setAttribute('rx', '11'); p.setAttribute('ry', '18');
+        p.setAttribute('fill', cp); p.setAttribute('opacity', '0.88');
+        p.setAttribute('transform', `rotate(${angle},${50 + 20 * Math.sin(rad)},${50 - 20 * Math.cos(rad)})`);
+        g.appendChild(p);
+      }
+
+      // Centre circle
+      const centre = document.createElementNS(ns, 'circle');
+      centre.setAttribute('cx', '50'); centre.setAttribute('cy', '50');
+      centre.setAttribute('r', '9'); centre.setAttribute('fill', ci);
+      g.appendChild(centre);
+
+      // Stamens (small lines)
+      for (let i = 0; i < 6; i++) {
+        const rad = (i * 60) * Math.PI / 180;
+        const line = document.createElementNS(ns, 'line');
+        line.setAttribute('x1', '50'); line.setAttribute('y1', '50');
+        line.setAttribute('x2', String(50 + 7 * Math.sin(rad)));
+        line.setAttribute('y2', String(50 - 7 * Math.cos(rad)));
+        line.setAttribute('stroke', cp); line.setAttribute('stroke-width', '1.2');
+        g.appendChild(line);
+        const dot = document.createElementNS(ns, 'circle');
+        dot.setAttribute('cx', String(50 + 7 * Math.sin(rad)));
+        dot.setAttribute('cy', String(50 - 7 * Math.cos(rad)));
+        dot.setAttribute('r', '1.8'); dot.setAttribute('fill', cp);
+        g.appendChild(dot);
+      }
+      return g;
+    }
+
+    /* Simple leaf */
+    function makeLeafSVG(ns, cp, ci) {
+      const g = document.createElementNS(ns, 'g');
+      const leaf = document.createElementNS(ns, 'ellipse');
+      leaf.setAttribute('cx', '50'); leaf.setAttribute('cy', '55');
+      leaf.setAttribute('rx', '18'); leaf.setAttribute('ry', '30');
+      leaf.setAttribute('fill', cp); leaf.setAttribute('opacity', '0.85');
+      leaf.setAttribute('transform', 'rotate(-20,50,55)');
+      g.appendChild(leaf);
+      const vein = document.createElementNS(ns, 'line');
+      vein.setAttribute('x1', '50'); vein.setAttribute('y1', '28');
+      vein.setAttribute('x2', '50'); vein.setAttribute('y2', '80');
+      vein.setAttribute('stroke', ci); vein.setAttribute('stroke-width', '1.5');
+      g.appendChild(vein);
+      return g;
+    }
+
+    /* ============================================================
+       SPARKLE SPAWNER
+       Creates small glowing dots that float up from a flower.
+    ============================================================ */
+    function spawnSparkles(container, lPct, tPct, count, color) {
+      for (let i = 0; i < count; i++) {
+        setTimeout(() => {
+          const sp = document.createElement('div');
+          sp.className = 'sparkle';
+          const size = Math.random() * 8 + 4;
+          sp.style.cssText = `
+            width:${size}px; height:${size}px;
+            left:${lPct + (Math.random() * 10 - 5)}%;
+            top:${tPct + (Math.random() * 10 - 5)}%;
+            background: radial-gradient(circle, #fff 0%, ${color} 60%, transparent 100%);
+          `;
+          container.appendChild(sp);
+          setTimeout(() => sp.remove(), 1600);
+        }, i * 120);
+      }
+    }
+
+    /* ============================================================
+       HEART LAUNCHER
+       Floods the screen with floating heart emojis.
+    ============================================================ */
+    let heartsFired = false;
+    function launchHearts() {
+      const emojis = ['💖', '💕', '🌸', '💗', '✨', '💝', '🌷', '💞'];
+      const count = 40;
+      for (let i = 0; i < count; i++) {
+        setTimeout(() => {
+          const h = document.createElement('div');
+          h.className = 'heart-particle';
+          h.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+          h.style.left = Math.random() * 95 + 'vw';
+          h.style.bottom = Math.random() * 25 + 'vh';
+          h.style.animationDuration = (Math.random() * 1.5 + 1.8) + 's';
+          h.style.fontSize = (Math.random() * 14 + 18) + 'px';
+          document.body.appendChild(h);
+          setTimeout(() => h.remove(), 3000);
+        }, i * 60);
+      }
+
+      // Show final message
+      if (!heartsFired) {
+        heartsFired = true;
+        setTimeout(() => {
+          document.getElementById('final-msg').classList.add('show');
+        }, 1200);
+      }
+    }
+
+    /* ============================================================
+       INTERSECTION OBSERVER
+       Reveals sections when they scroll into view.
+    ============================================================ */
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) e.target.classList.add('visible');
+      });
+    }, { threshold: 0.15 });
+
+    // Observe message & interactive sections for fade-in
+    ['message', 'interactive'].forEach(id => {
+      const el = document.getElementById(id);
+      el.style.opacity = '0';
+      el.style.transform = 'translateY(40px)';
+      el.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
+      observer.observe(el);
+    });
+
+    /* Make "visible" class apply the transition for these plain sections */
+    document.querySelectorAll('#message, #interactive').forEach(el => {
+      el.addEventListener('transitionend', () => { }, { once: true });
+    });
+
+    // Override observer to also apply opacity/transform correctly
+    const obs2 = new IntersectionObserver((entries) => {
+      entries.forEach(e => {
+        if (e.isIntersecting) {
+          e.target.style.opacity = '1';
+          e.target.style.transform = 'translateY(0)';
+        }
+      });
+    }, { threshold: 0.15 });
+
+    ['message', 'interactive'].forEach(id => obs2.observe(document.getElementById(id)));
+  </script>
+</body>
+
+</html>
